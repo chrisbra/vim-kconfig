@@ -14,5 +14,10 @@ let b:undo_ftplugin = "setl com< cms< fo<"
 
 setlocal comments=:# commentstring=#\ %s formatoptions-=t formatoptions+=croql
 
+" For matchit.vim
+if exists("loaded_matchit")
+  let b:match_words = '^\<menu\>:\<endmenu\>,^\<if\>:\<endif\>,^\<choice\>:\<endchoice\>'
+endif
+
 let &cpo = s:cpo_save
 unlet s:cpo_save
