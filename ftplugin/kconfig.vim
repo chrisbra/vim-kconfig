@@ -1,6 +1,10 @@
 " Vim filetype plugin file
-" Maintainer:       Nikolai Weibull <now@bitwi.se>
-" Latest Revision:  2008-07-09
+" Vim syntax file
+" Maintainer:           Christian Brabandt <cb@256bit.org>
+" Previous Maintainer:  Nikolai Weibull <now@bitwi.se>
+" Latest Revision:      2015-05-29
+" License:              Vim (see :h license)
+" Repository:		https://github.com/chrisbra/vim-kconfig
 
 if exists("b:did_ftplugin")
   finish
