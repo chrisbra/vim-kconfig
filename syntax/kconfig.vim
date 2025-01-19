@@ -1,7 +1,7 @@
 " Vim syntax file
 " Maintainer:           Christian Brabandt <cb@256bit.org>
 " Previous Maintainer:  Nikolai Weibull <now@bitwi.se>
-" Latest Revision:      2024-07-19
+" Latest Revision:      2025-01-19
 " License:              Vim (see :h license)
 " Repository:		https://github.com/chrisbra/vim-kconfig
 
@@ -587,8 +587,6 @@ syn match   kconfigConfOptExprGrpE    ')'
                                       \           kconfigConfOptExprOr
                                       \ skipwhite skipnl
 
-syn sync minlines=50
-
 hi def link kconfigTodo                 Todo
 hi def link kconfigComment              Comment
 hi def link kconfigKeyword              Keyword
@@ -714,6 +712,11 @@ syn region  kconfigHelpText
       \ start='\%(help\|---help---\)\ze\s*\n\z(\s\+\)'
       \ skip='^$'
       \ end='^\z1\@!'
+
+if !exists("kconfig_minlines")
+  let kconfig_minlines = 50
+endif
+exec "syn sync minlines=" . kconfig_minlines
 
 hi def link kconfigTodo         Todo
 hi def link kconfigComment      Comment
