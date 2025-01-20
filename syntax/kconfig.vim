@@ -1,7 +1,7 @@
 " Vim syntax file
 " Maintainer:           Christian Brabandt <cb@256bit.org>
 " Previous Maintainer:  Nikolai Weibull <now@bitwi.se>
-" Latest Revision:      2025-01-19
+" Latest Revision:      2025 Jan 20
 " License:              Vim (see :h license)
 " Repository:		https://github.com/chrisbra/vim-kconfig
 
