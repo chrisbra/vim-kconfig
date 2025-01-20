@@ -12,6 +12,8 @@ endif
 let s:cpo_save = &cpo
 set cpo&vim
 
+exe "syn sync minlines=" . get(g:, 'kconfig_minlines', 50)
+
 if exists("g:kconfig_syntax_heavy")
 
   syn match   kconfigBegin              '^' nextgroup=kconfigKeyword
@@ -712,11 +714,6 @@ else
         \ start='\%(help\|---help---\)\ze\s*\n\z(\s\+\)'
         \ skip='^$'
         \ end='^\z1\@!'
-
-  if !exists("kconfig_minlines")
-    let kconfig_minlines = 50
-  endif
-  exec "syn sync minlines=" . kconfig_minlines
 
   hi def link kconfigTodo         Todo
   hi def link kconfigComment      Comment
